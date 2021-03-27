@@ -10,7 +10,11 @@ import ru.geekbrains.geekbrains_popular_libraries_kotlin.mvp.presenter.list.IUse
 import ru.geekbrains.geekbrains_popular_libraries_kotlin.mvp.view.UsersView
 import ru.geekbrains.geekbrains_popular_libraries_kotlin.mvp.view.list.UserItemView
 
-class UsersPresenter(val uiScheduler: Scheduler, val usersRepo: IGithubUsersRepo, val router: Router, val screens: IScreens) :
+class UsersPresenter(
+    private val uiScheduler: Scheduler,
+    private val usersRepo: IGithubUsersRepo,
+    private val router: Router,
+    private val screens: IScreens) :
     MvpPresenter<UsersView>() {
 
     class UsersListPresenter : IUserListPresenter {
